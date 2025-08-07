@@ -1,27 +1,17 @@
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+import java.util.Scanner;
 
 public class solution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        char ch = sc.next().charAt(0);
-        if((ch >= 'A' && ch <= 'Z')||(ch >= 'a' && ch <= 'z')){
-            switch (Character.toLowerCase(ch)) {
-                case 'a':
-                case 'e':
-                case 'i':
-                case 'o':
-                case 'u':
-           System.out.println("The Character " + ch + " is Vowel");
-           break;
-           default:
-           System.out.println("The Character " + ch + " is Consonant");
+        char c = sc.next().charAt(0);
+            c = Character.toUpperCase(c);              
+            if (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U') {
+                System.out.println("The Character " + c + " is Vowel");
+            } else {
+                System.out.println("The Character " + c + " is Consonant");
             }
         } else {
-            System.out.println("Invalid Input");
+            System.out.println("Invalid Input");    
         }
     }
 }
