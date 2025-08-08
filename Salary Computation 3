@@ -4,19 +4,23 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
-public class solution {
+public class Solution {
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int bS = sc.nextInt();
-        double hra, da, gS;
-        if (bS < 15000) {
-            hra = 0.15 * bS;
-            da = 0.90 * bS;
-        } else {
-            hra = 5000;
-            da = 0.98 * bS;
+        Scanner sc=new Scanner(System.in);
+        int salary = sc.nextInt();
+        double HRA,DA; 
+        
+        if (salary < 15000){
+            HRA = (salary * 0.15);
+            DA = (salary * 0.90);
         }
-        gS = bS + hra + da;
-        System.out.printf("%.2f", gS);
+        else {
+            HRA = 5000;
+            DA = (salary * 0.98);
+            
+        }
+        System.out.printf("%.2f",salary + HRA + DA);
+      
     }
 }
