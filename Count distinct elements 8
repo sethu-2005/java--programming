@@ -1,0 +1,34 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+     public static void main(String arga[]){
+    Scanner sc=new Scanner(System.in);
+        int size=sc.nextInt();
+        int [] array=new int [size];
+        for(int i=0;i<size;i++){
+            array[i]=sc.nextInt();
+        }
+        int a=0;
+        for(int i=0;i<size;i++){
+            boolean b=true;
+            for(int j=0;j<i;j++){
+                if(array[i]==array[j]){
+                    b=false;
+                    break;
+                }
+            }
+            if(b){
+                a ++;
+            }
+        }
+        if(a==1){
+            System.out.println("There are " + a + " distinct element in the array.");
+        }else{
+            System.out.println("There are " + a + " distinct elements in the array.");
+        }
+    }
+}
